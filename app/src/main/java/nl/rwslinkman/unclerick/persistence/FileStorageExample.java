@@ -24,13 +24,13 @@ public class FileStorageExample {
             FileOutputStream fos = storageContext.openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
             fos.write(FILE_CONTENT.getBytes());
             fos.close();
+            Log.d(TAG, "example: Content written to File");
 
             // Read from file
             FileInputStream fis = storageContext.openFileInput(FILE_NAME);
             int content;
             StringBuilder result = new StringBuilder();
             while ((content = fis.read()) != -1) {
-                // convert to char and display it
                 char readChar = (char) content;
                 result.append(readChar);
             }
@@ -43,5 +43,4 @@ public class FileStorageExample {
             e.printStackTrace();
         }
     }
-
 }
