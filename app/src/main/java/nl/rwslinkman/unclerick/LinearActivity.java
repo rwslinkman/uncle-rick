@@ -1,8 +1,9 @@
 package nl.rwslinkman.unclerick;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
+import nl.rwslinkman.unclerick.persistence.FileStorageExample;
 import nl.rwslinkman.unclerick.persistence.SharedPreferencesExample;
 
 public class LinearActivity extends AppCompatActivity {
@@ -18,5 +19,6 @@ public class LinearActivity extends AppCompatActivity {
         super.onResume();
 
         new SharedPreferencesExample(this).example();
+        new FileStorageExample(this).example();
     }
 }
