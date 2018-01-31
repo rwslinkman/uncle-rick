@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import nl.rwslinkman.unclerick.persistence.FileStorageExample;
 import nl.rwslinkman.unclerick.persistence.SharedPreferencesExample;
+import nl.rwslinkman.unclerick.persistence.database.SqliteExample;
 
 public class LinearActivity extends AppCompatActivity {
 
@@ -20,5 +21,6 @@ public class LinearActivity extends AppCompatActivity {
 
         new SharedPreferencesExample(this).example();
         new FileStorageExample(this).example();
+        new SqliteExample(this).example();
     }
 }

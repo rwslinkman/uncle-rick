@@ -10,8 +10,8 @@ public class SharedPreferencesExample {
     private Context prefsContext;
     private static final String PREFS_STORAGE_NAME = "iStoreSuperSecretDataHere";
 
-    public SharedPreferencesExample(Context c) {
-        this.prefsContext = c;
+    public SharedPreferencesExample(Context context) {
+        this.prefsContext = context;
     }
 
     public void example() {

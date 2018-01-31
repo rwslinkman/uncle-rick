@@ -1,6 +1,7 @@
 package nl.rwslinkman.unclerick.persistence;
 
 import android.content.Context;
+import android.os.Environment;
 import android.util.Log;
 
 import java.io.FileInputStream;
@@ -37,10 +38,29 @@ public class FileStorageExample {
             String readResult = result.toString();
             Log.d(TAG, "example: Read result = " + readResult);
 
+            // External
+            boolean writable = isExternalStorageWritable();
+            boolean readable = isExternalStorageReadable();
+            System.out.println("Can I write? " + Boolean.toString(writable));
+            System.out.println("Can I read? " + Boolean.toString(readable));
+
         } catch (IOException e) {
             Log.e(TAG, "example: Helemaal kapot!");
             // Sum ting wong
             e.printStackTrace();
         }
+    }
+
+    /* Checks if external storage is available for read and write */
+    public boolean isExternalStorageWritable() {
+        String state = Environment.getExternalStorageState();
+        return Environment.MEDIA_MOUNTED.equals(state);
+    }
+
+    /* Checks if external storage is available to at least read */
+    public boolean isExternalStorageReadable() {
+        String state = Environment.getExternalStorageState();
+        return Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
     }
 }
