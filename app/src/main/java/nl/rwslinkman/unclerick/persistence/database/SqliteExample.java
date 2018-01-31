@@ -66,5 +66,7 @@ public class SqliteExample {
         for (String item : items) {
             Log.d(TAG, "example: " + item);
         }
+
+        helper.close();
     }
 }

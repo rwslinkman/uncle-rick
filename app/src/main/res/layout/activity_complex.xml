@@ -45,4 +45,18 @@
         android:gravity="center_horizontal"
         android:text="Hello again!" />
 
+    <Button
+        android:id="@+id/button_to_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Navigate to LinearActivity" />
+
+    <Button
+        android:id="@+id/button_to_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_to_linear"
+        android:text="Navigate to RelativeActivity" />
+
 </RelativeLayout>

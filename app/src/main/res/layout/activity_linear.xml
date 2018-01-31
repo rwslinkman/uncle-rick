@@ -6,16 +6,18 @@
     android:weightSum="3"
     tools:context="nl.rwslinkman.unclerick.LinearActivity">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="Hello world!" />
-
-    <TextView
+    <Button
+        android:id="@+id/button_to_relative"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Hello again!" />
+        android:text="Navigate to RelativeActivity" />
+
+    <Button
+        android:id="@+id/button_to_complex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Navigate to ComplexLayoutActivity" />
 
 </LinearLayout>

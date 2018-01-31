@@ -17,4 +17,18 @@
         android:layout_below="@id/my_textview"
         android:text="Hello again!" />
 
+    <Button
+        android:id="@+id/button_to_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Navigate to LinearActivity" />
+
+    <Button
+        android:id="@+id/button_to_complex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_to_linear"
+        android:text="Navigate to ComplexLayoutActivity" />
+
 </RelativeLayout>
